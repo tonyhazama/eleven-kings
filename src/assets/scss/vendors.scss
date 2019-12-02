@@ -1,2 +1,6 @@
-@import '../vendors/normalize.css';
-@import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../vendors/css/normalize.css';
+@import '../vendors/css/variables';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../vendors/css/bootstrap.min.css';
+// Theme https://bootswatch.com/lux/
+@import '../vendors/css/bootswatch';

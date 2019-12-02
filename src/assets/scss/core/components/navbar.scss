@@ -1,0 +1,33 @@
+#navbar{
+  padding: 1em 4em;
+  // line-height: 40px;
+
+  .container-fluid{
+    padding: 0px;
+  }
+
+  .navbar-brand{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 4em;
+  }
+
+  .nav-item{
+    font-weight: bold;
+    font-size: 1em;
+    margin-right: 1em;
+  }
+
+  .user-profile{
+    .user-pic{
+      overflow: hidden;
+      border-radius: 100%;
+      background: #eeeeee;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 40px;
+      img{ width: 100%; }
+    }
+  }
+}
