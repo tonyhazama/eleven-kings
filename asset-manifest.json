@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/eleven-kings/static/css/main.1c9a5226.chunk.css",
+    "main.js": "/eleven-kings/static/js/main.1866fb05.chunk.js",
+    "main.js.map": "/eleven-kings/static/js/main.1866fb05.chunk.js.map",
+    "runtime~main.js": "/eleven-kings/static/js/runtime~main.b85fdc37.js",
+    "runtime~main.js.map": "/eleven-kings/static/js/runtime~main.b85fdc37.js.map",
+    "static/js/2.9a335fbb.chunk.js": "/eleven-kings/static/js/2.9a335fbb.chunk.js",
+    "static/js/2.9a335fbb.chunk.js.map": "/eleven-kings/static/js/2.9a335fbb.chunk.js.map",
+    "index.html": "/eleven-kings/index.html",
+    "precache-manifest.389ab32790726cd23d120621ffeb5eab.js": "/eleven-kings/precache-manifest.389ab32790726cd23d120621ffeb5eab.js",
+    "service-worker.js": "/eleven-kings/service-worker.js",
+    "static/css/main.1c9a5226.chunk.css.map": "/eleven-kings/static/css/main.1c9a5226.chunk.css.map",
+    "static/media/index.scss": "/eleven-kings/static/media/bg.9af4ac25.jpg"
+  }
+}
