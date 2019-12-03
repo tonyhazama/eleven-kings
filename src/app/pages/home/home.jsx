@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import image from 'assets/images/bg.jpg'
 import Filter from './filter';
+import Rating from 'shared/components/rating/rating';
 
 export default class Home extends Component {
 
@@ -32,7 +33,9 @@ export default class Home extends Component {
                   <div className="card product-item">
                     <div className="product-image"><img src={`${process.env.PUBLIC_URL}/images/${(i%3) + 1}.jpg`} alt="liquor"/></div>
                     <div className="product-body">
-                      <h6 className="product-title">{(['Bicardi Scotch Whiskey', 'Jack Daniels', 'Jose Cuervo'])[i%3]}</h6>
+                      <span className="product-title">{(['Bicardi Scotch Whiskey', 'Jack Daniels', 'Jose Cuervo'])[i%3]} {i === 2 && <i className="fas ml-1 fa-certificate"></i>}</span>
+                      <span className="product-price">$ {500 + Math.floor(Math.random() * 500)}.00</span> 
+                      <span><Rating value="3.5" /></span>
                       {/* <span className="product-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                       Iusto, dolores nihil? Magni id corrupti aperiam consequuntur modi.</span> */}
                     </div>

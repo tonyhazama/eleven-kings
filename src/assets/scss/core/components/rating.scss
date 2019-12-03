@@ -1,0 +1,24 @@
+.rating-container{
+  display: flex;
+  height: 20px;
+  // justify-content: center;
+  align-items: center;
+
+  .star{
+    font-size: 0.8em;
+    display: flex;
+    line-height: 20px;
+    width: 16px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .star.half > *:first-child{ z-index: 3; position: absolute; }
+  .fa-star.full, .fa-star-half{ color: #343a40; }
+  .fa-star.none{ color: #dedede; }
+
+  .rating-count{
+    margin-left: 0.5em;
+    font-size: 0.8em;
+  }
+}

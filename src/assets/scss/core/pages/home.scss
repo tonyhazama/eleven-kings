@@ -29,7 +29,7 @@
   }
 
   #searchBar{
-    input, button{ border-radius: 4px; }
+    // input, button{ border-radius: 4px; }
     button{
       height: 45px;
       line-height: 45px;
@@ -58,15 +58,22 @@
       }
 
       .product-body{
-        padding: 1em 1.5em;
+        padding: 1em;
         display: flex;
         flex-direction: column;
 
         .product-title{
           font-weight: bold;
-          font-size: 1em;
+          font-size: 1.1em;
+          letter-spacing: normal;
           // text-transform: uppercase;
-          margin-bottom: 0.5em;
+          // margin-bottom: 0.5em;
+        }
+
+        .product-price{
+          color: orangered;
+          font-family: 'open sans', Helvetica, Arial, sans-serif;
+          font-weight: bold;
         }
       }
 

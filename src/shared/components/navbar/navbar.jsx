@@ -25,19 +25,19 @@ export default class AppNavbar extends Component {
   render() {
     const { isCompact } = this.state
     return (
-      <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+      <div className="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
         <div className="container">
-          <a class="navbar-brand" href="#">Eleven Kings</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <a className="navbar-brand" href="#">Eleven Kings</a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Wine</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Spirits</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Specialties</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Novelties</a></li>
+          <div className="collapse navbar-collapse" id="navbarColor03">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active"><a className="nav-link" href="#">Home</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Wine</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Spirits</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Specialties</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Novelties</a></li>
             </ul>
           </div>
           <div className="user-profile">
