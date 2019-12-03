@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/eleven-kings/precache-manifest.389ab32790726cd23d120621ffeb5eab.js"
+  "/eleven-kings/precache-manifest.4ac3a56a17615d3f8146cc393d098374.js"
 );
 
 self.addEventListener('message', (event) => {

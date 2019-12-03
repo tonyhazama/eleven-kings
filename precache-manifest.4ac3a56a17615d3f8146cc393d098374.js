@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3745d309ac05be84373c059b2ae69bad",
+    "revision": "4bdb252ed9f00f794f453bbf06042e2d",
     "url": "/eleven-kings/index.html"
   },
   {
-    "revision": "50cf6334978246a42807",
-    "url": "/eleven-kings/static/css/main.1c9a5226.chunk.css"
+    "revision": "495b1a03ed8e67f369bb",
+    "url": "/eleven-kings/static/css/main.a1323ccb.chunk.css"
   },
   {
-    "revision": "d7e259812ecf8e64c11c",
-    "url": "/eleven-kings/static/js/2.9a335fbb.chunk.js"
+    "revision": "6f74da58f6231b3400d2",
+    "url": "/eleven-kings/static/js/2.d0454f39.chunk.js"
   },
   {
-    "revision": "50cf6334978246a42807",
-    "url": "/eleven-kings/static/js/main.1866fb05.chunk.js"
+    "revision": "495b1a03ed8e67f369bb",
+    "url": "/eleven-kings/static/js/main.b315f425.chunk.js"
   },
   {
     "revision": "bf2ac22adb4d53454cbc",
