@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Splash from './pages/splash';
 import Home from './pages/home/home';
+import Dashboard from './pages/dashboard/dashboard'
 import Layout from 'app/layout/layout';
 
 export default class App extends Component{
@@ -25,14 +26,27 @@ export default class App extends Component{
     ) : (
       <Layout>
         <Router basename={process.env.PUBLIC_URL}>
-          <div id="router-wrapper">
-            <Route exact path="/" component={Home} />
-            {/* <Route path="/topics" component={Topics} /> */}
-          </div>
+          <Switch>
+            {/* <div id="router-wrapper"> */}
+              <Route exact path="/" component={Home} />
+              <Route exact path="/dashboard/" component={Dashboard} />
+              <Route exact path="/dashboard/:screen" component={Dashboard} />
+              {/* <Route path="*" component={My404Component} exact /> */}
+            {/* </div> */}
+          </Switch>
         </Router>
       </Layout>
     );
   }
 }
 
-;
+export const My404Component = () => {
+  return (
+    <div className="jumbotron text-center">
+      <h1>PAGE NOT FOUND</h1>
+      <p>You seem lost, here take a shot to clear up your mind</p>
+      <br />
+      <a className="btn btn-primary" href="#" role="button">BACK</a>
+    </div>
+  )
+}

@@ -26,12 +26,12 @@ export default class Rating extends Component {
       'none' : "fas fa-star none"
     }
 
-    if (type === 'full' || type == 'none') {
-      return (<span className="star" key={key}><i class={`fas fa-star ${type}`}></i></span>)
+    if (type === 'full' || type === 'none') {
+      return (<span className="star" key={key}><i className={`fas fa-star ${type}`}></i></span>)
     } else {
       return (<span key={key} className="star half">
-        <i class="fas fa-star-half"></i>
-        <i class="fas fa-star none"></i>
+        <i className="fas fa-star-half"></i>
+        <i className="fas fa-star none"></i>
       </span>)
     }
   }
