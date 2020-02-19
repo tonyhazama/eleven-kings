@@ -24,18 +24,19 @@ export default class App extends Component{
     return isLoading ? (
       <Splash />
     ) : (
-      <Layout>
-        <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
+        <Layout>
           <Switch>
             {/* <div id="router-wrapper"> */}
               <Route exact path="/" component={Home} />
+              <Route exact path="/home" component={Home} />
               <Route exact path="/dashboard/" component={Dashboard} />
-              <Route exact path="/dashboard/:screen" component={Dashboard} />
+              <Route exact path="/dashboard/:menu/:submenu?" component={Dashboard} />
               {/* <Route path="*" component={My404Component} exact /> */}
             {/* </div> */}
           </Switch>
-        </Router>
-      </Layout>
+        </Layout>
+      </Router>
     );
   }
 }

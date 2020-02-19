@@ -6,7 +6,7 @@ export default class Layout extends Component {
     return (
       <div id="layout">
         <AppNavbar />
-        <div className="" id="content">
+        <div className="content" id="content">
           {this.props.children}
         </div>
       </div>

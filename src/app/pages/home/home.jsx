@@ -23,7 +23,7 @@ export default class Home extends Component {
   
   render() {
     return (
-      <div className="container"  style={{paddingTop: '100px'}}>
+      <div className="container app-container">
         <div id="home">
           <div className="banner">
             <img src={image} alt=""/>

@@ -1,60 +1,69 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Profile from './profile';
 import Shop from './shop/shop'
+import ListGroup from 'shared/components/list-group/list-group';
+import ShopBrand from './shop/shop-brand';
+import ShopProduct from './shop/shop-product';
 
 
 
 export default class Dashboard extends Component {
 
+  menu = [
+    { name: 'Profile', path: 'profile', children: [] },
+    { name: 'Shop', path: 'shop', children: [
+      { name: 'Brand', path: 'brand' },
+      { name: 'Product', path: 'product' }
+    ] },
+    { name: 'Settings', path: 'settings', children: [] },
+    { name: 'Settings', path: 'sese', children: [] },
+    { name: 'Settings', path: 'keke', children: [] },
+    { name: 'Settings', path: 'dede', children: [] },
+  ];
+
   constructor(props) {
     super(props);
-    this.menu = [
-      { name: 'Profile', path: 'profile' },
-      { name: 'Shop', path: 'shop' },
-      { name: 'Settings', path: 'settings' },
-    ];
+    
+    // Check initial menu
+    const { menu, submenu } = this.props.match.params;
+    let initialPath = (menu || 'profile' ) + '/' + (submenu || '');
+    
     this.state = {
-      activeMenu: {}
+      activeMenu: initialPath
     }
+
   }
   
+  componentWillMount() {
+    // this.setState({activeMenu: screen});
+  }
+
   componentDidMount() {
-    let screen = this.props.match.params.screen;
-    if (!!screen) {
-      this.changePage(screen)
-    } else {
-      this.setState({activeMenu: 'profile'})
+    const { activeMenu } = this.state;
+    if (activeMenu !== 'profile') {
+      this.props.history.push(activeMenu);
     }
   }
 
   changePage(page = '') {
+    console.log('change page to ' + page);
     this.setState({activeMenu: page});
-    this.props.history.push(page);
+    this.props.history.push('/dashboard/'+page);
     // this.
   }
   
   
   render() {
     return (
-      <div className="container"  style={{paddingTop: '100px'}}>
+      <div className="container app-container">
         <div id="dashboard">
           {/* <h4>Dashboard</h4>
           <hr className="mb-4" /> */}
           <div className="row">
             {/* Sidebar */}
             <div className="col-md-3" id="dashSidebar">
-              <div className="list-group mb-4">
-                { this.menu.map(({path, name}, i) => {
-                  const isActive = (path === this.state.activeMenu);
-                  return (
-                    <div key={"dashMenu"+i} onClick={() => this.changePage(path)}
-                    className={"list-group-item list-group-item-action " + (isActive && " active") }>
-                      {name}
-                    </div>
-                  )
-                })}
-              </div>
+              <ListGroup list={this.menu} change={e => this.changePage(e)} initialKey={this.state.activeMenu} />
               <div className="card mb-4">
                 <div className="card-body">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -67,14 +76,13 @@ export default class Dashboard extends Component {
             
             {/* Main Content */}
             <div className="col-md-9" id="dashContainer">
-              {/* <pre>{JSON.stringify(this.state, '', 2)}</pre> */}
+              <Redirect exact from="/dashboard" to="/dashboard/profile" />
               <Switch>
-                <Redirect exact from="/dashboard" to="/dashboard/profile" />
                 <Route exact path="/dashboard/profile" component={Profile} />
                 <Route exact path="/dashboard/shop" component={Shop} />
-                {/* <Redirect ></Redirect> */}
+                <Route exact path="/dashboard/shop/brand" component={ShopBrand} />
+                <Route exact path="/dashboard/shop/product" component={ShopProduct} />
                 <Route path='*' exact={true} component={My404Component} />
-                  {/* <Route path="/topics" component={Topics} /> */}
               </Switch>
             </div>
           </div>
@@ -96,3 +104,24 @@ export const My404Component = () => {
     </div>
   )
 }
+
+
+
+/*
+<div className="list-group mb-4">
+                { this.menu.map(({path, name, children}, i) => {
+                  const isActive = (path === this.state.activeMenu);
+                  return (
+                    <React.Fragment>
+                      <div key={"dashMenu"+i} onClick={() => this.changePage(path)}
+                      className={"list-group-item list-group-item-action " + (isActive && " active") }>
+                        {name}
+                      </div>
+                        { children.map(({path, name}, ci) => {
+                          return isActive ? <div key={"dashMenu"+i+ci} className={"list-group-item child "}>{name}</div> : null;
+                        }) }
+                    </React.Fragment>
+                  )
+                })}
+              </div>
+              */

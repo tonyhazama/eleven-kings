@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'assets/scss/index.scss';
+import 'bootstrap/dist/js/bootstrap.js';
 import $ from 'jquery';
+import Popper from 'popper.js';
 import 'jquery';
 import '@fortawesome/fontawesome-free/js/all';
 import App from './app/app.jsx';

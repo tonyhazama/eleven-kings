@@ -19,7 +19,7 @@
   }
 
   .user-profile{
-    .user-pic{
+    .user-picture-container{
       overflow: hidden;
       border-radius: 100%;
       background: #eeeeee;
@@ -27,7 +27,23 @@
       width: 40px;
       text-align: center;
       line-height: 40px;
-      img{ width: 100%; }
+      font-size: 18px;
+      font-family: 'calibri';
+      font-weight: bolder;
+      color: #ffffff;
+      cursor: pointer;
+
+      .user-initial{ line-height: 40px; text-align: center; }
+      .user-picture{ width: 100%; }
+    }
+  }
+
+  #navbaUserMenu{
+    padding: 0.5em 0em;
+    // .dropdown-header{ padding-bottom: 1em; }
+    .dropdown-item{
+      padding: 0.5em 1.5em;
+      // font-weight: bold;
     }
   }
 }

@@ -1,0 +1,131 @@
+
+@import '../vendors/css/variables';
+
+.list-group.app-list-group{
+  $border-color: #dfdfdf;
+  // box-shadow: 0px 2px 10px rgba(17, 17, 17, 0.1);
+
+  .list-group-heading{
+    padding: 0.75em 1.25em;
+    background: #ffffff;
+    font-weight: 1000;
+  }
+
+  .list-group-item{
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 20px;
+    background-color: $white;
+    border-color: $border-color;
+    color: $gray-500;
+    padding: 0.75em 1.5em;
+    // border-width: 0px 0px 0px 0em !important;
+    
+    &.selected{
+      background: $gray-100;
+      color: $primary;
+      font-weight: 700;
+      // border-color: $primary;
+      &:hover { 
+        border-color: $border-color;
+      }
+    }
+
+    &:hover{
+      background: $gray-100;
+      border-color: $border-color;
+    }
+  }
+
+  .list-group-child{
+    background: #ffffff;
+    border: 1px solid $border-color;
+    border-width: 0px 1px;
+    padding: 0.5em 0em;
+    .list-group-item{
+      border-width: 0px !important;
+      padding: 0.5em calc(1em + 1em);
+
+      &.selected{ 
+        background-color: $white;
+        color: $gray-700;
+        border-width: 0px !important;
+      }
+      &:hover{ background: $white; color: $gray-700; }
+    }
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+@import '../vendors/css/variables';
+
+.list-group.app-list-group{
+  box-shadow: 0px 2px 10px rgba(17, 17, 17, 0.1);
+
+  .list-group-heading{
+    padding: 0.75em 1.25em;
+    background: #ffffff;
+    font-weight: 1000;
+  }
+
+  .list-group-item{
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 20px;
+    background-color: $white;
+    border-color: $white;
+    color: $gray-500;
+    padding: 0.75em 1em;
+    border-width: 0px 0px 0px 0em !important;
+    
+    &.selected{
+      background: $gray-100;
+      color: $primary;
+      font-weight: 700;
+      border-color: $primary;
+      &:hover { border-color: $primary; }
+    }
+
+    &:hover{
+      background: $gray-100;
+      border-color: $gray-100;
+    }
+  }
+
+  .list-group-child{
+    background: #ffffff;
+    padding: 0.5em 0em;
+    .list-group-item{
+      border-width: 0px !important;
+      padding: 0.5em calc(1em + 0.25em + 0.5em + 1em);
+
+      &.selected{ 
+        background-color: $white;
+        color: $gray-700;
+        border-width: 0px !important;
+      }
+      &:hover{ background: $white; color: $gray-700; }
+    }
+    
+  }
+}
+
+*/

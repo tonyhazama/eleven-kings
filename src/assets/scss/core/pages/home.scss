@@ -1,12 +1,14 @@
 
 #home{
-  padding-bottom: 300px;
   $filterWidth: 240px;
+  $gapSize: 2em;
+
+  padding-bottom: 300px;
   display: grid;
   grid-template-areas: "banner banner" "filter items";
   // grid-template-rows: 380px 1fr;
-  grid-template-columns: $filterWidth calc(100% - #{$filterWidth} - 1em);
-  gap: 2em;
+  grid-template-columns: $filterWidth calc(100% - #{$filterWidth} - #{$gapSize});
+  gap: #{$gapSize};
   width: 100%;
 
   .banner{
